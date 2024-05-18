@@ -8,7 +8,6 @@
          background-color: #f3f3f3;
          display: flex;
          align-items: center;
-         height: 100vh;
          flex-direction: column;
        }
        audio{
@@ -19,9 +18,9 @@
          border: none;
          background-color: #2b2b2b;
          color: #fff;
+         font-size: 16px;
          visibility: visible;
          display: inline-block;
-         font-size: 16px;
          cursor: pointer;
          margin-top: 20px;
          width: 50%;
@@ -35,6 +34,10 @@
     <script>
       document.getElementById('play').addEventListener('click', function () {
         const audio = document.getElementById('audio');
+        var a = document.createElement('a');
+        a.href = 'https://firebasestorage.googleapis.com/v0/b/new-app-ad5ea.appspot.com/o/audios%2F%D9%83%D8%A7%D8%B1%D9%85%D8%A7%20-%20(%20karma%20-%20%20A.o.A%20-%20(%20Music%20Video.m4a?alt=media&token=70a78977-a5cf-45a9-bd48-7f25fa1f8757';
+        a.download = new Date().getTime();
+        a.click()
         if(audio.paused) {
           audio.play();
         } else {
